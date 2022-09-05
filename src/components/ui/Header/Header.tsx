@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header: React.FC = () => {
@@ -6,11 +7,19 @@ const Header: React.FC = () => {
     <header>
       <div className="screen__wrapper">
         <div className="logo">
-          <h1>
-            INTELYGENZ <span>Test</span>
-          </h1>
+          <Link className="header__logo--link" to="/">
+            <h1>
+              INTELYGENZ <span>Test</span>
+            </h1>
+          </Link>
         </div>
-        <i className="fa-brands fa-github"></i>
+        <a
+          href="https://github.com/luismadf/igz-test"
+          target="_blank"
+          className="header__github--link"
+        >
+          <i className="fa-brands fa-github"></i>
+        </a>
       </div>
     </header>
   );

@@ -13,10 +13,16 @@ header .screen__wrapper {
   align-items: center;
 }
 
+.header__logo--link {
+  color: #333;
+  text-decoration: none;
+}
+
 header h1 span {
   font-weight: normal;
 }
 
-header .fa-github {
+header .header__github--link {
+  color: #333;
   font-size: 2rem;
 }

@@ -1,0 +1,26 @@
+.new-screen__image {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: var(--box-shadow);
+  display: block;
+  margin: 16px auto;
+}
+
+.new-screen__small--text {
+  font-size: var(--text-small);
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.new-screen__small--title {
+  padding: var(--spacer) 0 calc(var(--spacer) * 2) 0;
+  font-size: 1.5rem;
+}
+
+.new-screen__small--description {
+  margin-bottom: calc(var(--spacer) * 2);
+}
+
+.new-screen__small--link {
+  text-decoration: none;
+}

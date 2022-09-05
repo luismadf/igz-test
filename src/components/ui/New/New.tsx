@@ -1,13 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { normalizeNew } from "../../../utils";
 import { NewProps } from "../../../interfaces";
 import "./New.css";
-import { normalizeNew } from "../../../utils/new.utils";
 
 interface Props {
   item: NewProps;
 }
 
 const New: React.FC<Props> = ({ item }) => {
+  let navigate = useNavigate();
+
   const {
     author,
     title,
@@ -19,8 +22,12 @@ const New: React.FC<Props> = ({ item }) => {
     timeFromNow,
   } = normalizeNew(item);
 
+  const onClick = () => {
+    navigate(`/new`, { state: { ...item } });
+  };
+
   return (
-    <div className="new">
+    <div className="new" onClick={onClick}>
       <div className="new__content">
         <span className="new__content--pill">{category}</span>
         <h3>{title}</h3>
