@@ -1,0 +1,15 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.search-bar__icon {
+  margin-right: 12px;
+  font-size: 1.8rem;
+}
+
+.search-bar input {
+  border: gray;
+  padding: 12px;
+}

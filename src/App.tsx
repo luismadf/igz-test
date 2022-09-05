@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Layout, New } from "./components";
+import { Layout, New, SearchBar } from "./components";
 import { normalizeNew } from "./utils/new.utils";
 import { NewProps } from "./interfaces/interfaces";
 
@@ -118,6 +118,17 @@ const MOCK_DATA = [
 
 function App() {
   const [news, setNews] = useState([]) as any;
+  const [showNews, SetShowNews] = useState([]) as any;
+
+  const onChange = ({ target }: any) => {
+    const filteredNews = news.filter(
+      (item: NewProps) =>
+        item.title.toLowerCase().includes(target.value.toLowerCase()) ||
+        item.description.toLowerCase().includes(target.value.toLowerCase())
+    );
+    console.log(filteredNews);
+    SetShowNews(filteredNews);
+  };
 
   useEffect(() => {
     // const getNews = () => {
@@ -130,13 +141,17 @@ function App() {
     // getNews();
 
     const normalizeNews = MOCK_DATA.map((item) => normalizeNew(item));
-    setNews(normalizeNews);
+    const organizeByDateNews = normalizeNews.sort(
+      (a: any, b: any) => b.normalDate - a.normalDate
+    );
+    setNews(organizeByDateNews);
+    SetShowNews(organizeByDateNews);
   }, []);
 
   return (
     <Layout>
-      <input type="text" />
-      {news.map((item: NewProps, key: number) => (
+      <SearchBar handleOnChange={onChange} />
+      {showNews.map((item: NewProps, key: number) => (
         <New item={item} key={key} />
       ))}
     </Layout>

@@ -10,6 +10,7 @@ export const normalizeNew = (item: NewProps) => {
     shortDescription: item.description.slice(0, 80).concat("..."),
     image: item.image ? item.image : "/images/mock-image.jpg",
     date: moment(item.published_at).format("DD/MM/YYYY"),
+    normalDate: new Date(item.published_at),
     timeFromNow: moment(item.published_at).fromNow(),
   };
 };
