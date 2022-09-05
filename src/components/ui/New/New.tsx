@@ -15,7 +15,7 @@ const New: React.FC<Props> = ({ item }) => {
     url,
     image,
     category,
-    date,
+    spanishDate,
     timeFromNow,
   } = normalizeNew(item);
 
@@ -25,7 +25,7 @@ const New: React.FC<Props> = ({ item }) => {
         <span className="new__content--pill">{category}</span>
         <h3>{title}</h3>
         <p className="new__content--description">{shortDescription}</p>
-        <p className="new__content--date">{date}</p>
+        <p className="new__content--date">{spanishDate}</p>
       </div>
       <div className="new__image">{image ? <img src={image} /> : null}</div>
     </div>

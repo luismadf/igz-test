@@ -142,7 +142,7 @@ function App() {
 
     const normalizeNews = MOCK_DATA.map((item) => normalizeNew(item));
     const organizeByDateNews = normalizeNews.sort(
-      (a: any, b: any) => b.normalDate - a.normalDate
+      (a: any, b: any) => b.date - a.date
     );
     setNews(organizeByDateNews);
     SetShowNews(organizeByDateNews);

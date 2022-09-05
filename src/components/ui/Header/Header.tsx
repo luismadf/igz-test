@@ -5,7 +5,12 @@ const Header: React.FC = () => {
   return (
     <header>
       <div className="screen__wrapper">
-        <h1>IGZ Test</h1>
+        <div className="logo">
+          <h1>
+            INTELYGENZ <span>Test</span>
+          </h1>
+        </div>
+        <i className="fa-brands fa-github"></i>
       </div>
     </header>
   );

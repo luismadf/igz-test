@@ -6,3 +6,17 @@ header {
   top: 0;
   backdrop-filter: blur(5px);
 }
+
+header .screen__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 span {
+  font-weight: normal;
+}
+
+header .fa-github {
+  font-size: 2rem;
+}
