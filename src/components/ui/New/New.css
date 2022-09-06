@@ -3,6 +3,7 @@
   background-color: white;
   border-radius: 8px;
   margin: 16px 0;
+  max-height: 200px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
   cursor: pointer;
