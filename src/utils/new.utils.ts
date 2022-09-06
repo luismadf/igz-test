@@ -11,6 +11,5 @@ export const normalizeNew = (item: NewProps) => {
     image: item.image ? item.image : "/images/mock-image.jpg",
     spanishDate: moment(item.published_at).format("DD/MM/YYYY"),
     date: new Date(item.published_at),
-    timeFromNow: moment(item.published_at).fromNow(),
   };
 };

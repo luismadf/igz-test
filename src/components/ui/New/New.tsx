@@ -1,28 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { normalizeNew } from "../../../utils";
-import { NewProps } from "../../../interfaces";
+import { NormalizeNewProps } from "../../../interfaces";
 import "./New.css";
 
 interface Props {
-  item: NewProps;
+  item: NormalizeNewProps;
 }
 
 const New: React.FC<Props> = ({ item }) => {
   let navigate = useNavigate();
 
-  const {
-    author,
-    title,
-    shortDescription,
-    url,
-    image,
-    category,
-    spanishDate,
-    timeFromNow,
-  } = normalizeNew(item);
+  const { title, shortDescription, image, category, spanishDate } = item;
 
   const onClick = () => {
+    // Sending the state as a prop to the New screen
     navigate(`/new`, { state: { ...item } });
   };
 
@@ -34,7 +25,9 @@ const New: React.FC<Props> = ({ item }) => {
         <p className="new__content--description">{shortDescription}</p>
         <p className="new__content--date">{spanishDate}</p>
       </div>
-      <div className="new__image">{image ? <img src={image} /> : null}</div>
+      <div className="new__image">
+        {image ? <img src={image} alt={title} /> : null}
+      </div>
     </div>
   );
 };

@@ -7,3 +7,8 @@ export interface NewProps {
   category: string;
   published_at: string;
 }
+
+export interface NormalizeNewProps extends NewProps {
+  shortDescription: string;
+  spanishDate: string;
+}

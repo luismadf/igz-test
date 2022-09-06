@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Layout, New, SearchBar } from "./components";
 import { normalizeNew } from "./utils/new.utils";
-import { NewProps } from "./interfaces/interfaces";
+import { NewProps, NormalizeNewProps } from "./interfaces/interfaces";
 
 const MOCK_DATA = [
   {
@@ -126,7 +126,6 @@ function App() {
         item.title.toLowerCase().includes(target.value.toLowerCase()) ||
         item.description.toLowerCase().includes(target.value.toLowerCase())
     );
-    console.log(filteredNews);
     SetShowNews(filteredNews);
   };
 
@@ -151,7 +150,7 @@ function App() {
   return (
     <Layout>
       <SearchBar handleOnChange={onChange} />
-      {showNews.map((item: NewProps, key: number) => (
+      {showNews.map((item: NormalizeNewProps, key: number) => (
         <New item={item} key={key} />
       ))}
     </Layout>

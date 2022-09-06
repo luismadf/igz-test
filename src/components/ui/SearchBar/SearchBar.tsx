@@ -2,7 +2,7 @@ import React from "react";
 import "./SearchBar.css";
 
 interface Props {
-  handleOnChange: any;
+  handleOnChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 const SearchBar: React.FC<Props> = ({ handleOnChange }) => {
