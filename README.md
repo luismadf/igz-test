@@ -33,3 +33,7 @@ Se utiliza por ejemplo en el Layout, para evitar contruir el Header y el Footer 
 ### Patron de Contención / Higher-Order Components
 
 Se utiliza por ejemplo en el Layout, para evitar utilizar un componente diferente en cada pantalla, le damos la posibilidad de poder pasarle un Children y ser usado multiple veces.
+
+## Test
+
+Para correr los test correr el comando `yarn test`
