@@ -27,6 +27,14 @@
   max-width: fit-content;
 }
 
+.new__content--pill.national {
+  background-color: #327ce7;
+}
+
+.new__content--pill.sports {
+  background-color: #a2d2ff;
+}
+
 .new__content h3 {
   font-size: 1.1rem;
   margin-bottom: 8px;

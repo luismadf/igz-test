@@ -20,7 +20,7 @@ const New: React.FC<Props> = ({ item }) => {
   return (
     <div className="new" onClick={onClick}>
       <div className="new__content">
-        <span className="new__content--pill">{category}</span>
+        <span className={`new__content--pill ${category}`}>{category}</span>
         <h3>{title}</h3>
         <p className="new__content--description">{shortDescription}</p>
         <p className="new__content--date">{spanishDate}</p>

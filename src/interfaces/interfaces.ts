@@ -5,7 +5,7 @@ export interface NewProps {
   url: string;
   image: string | undefined | null;
   category: string;
-  published_at: string;
+  published: string;
 }
 
 export interface NormalizeNewProps extends NewProps {

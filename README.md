@@ -22,7 +22,7 @@ Utilizada para la navegación entre las páginas.
 
 ### Moment
 
-Utilizada para el manejo de las fechas, utilizada por ser ampliamente conocida.
+Utilizada para el manejo de las fechas, usada por ser ampliamente conocida.
 
 ## Patrones de diseño
 
