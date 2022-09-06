@@ -17,6 +17,7 @@ const Header: React.FC = () => {
           href="https://github.com/luismadf/igz-test"
           target="_blank"
           className="header__github--link"
+          rel="noreferrer"
         >
           <i className="fa-brands fa-github"></i>
         </a>

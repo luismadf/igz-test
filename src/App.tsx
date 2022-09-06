@@ -4,7 +4,7 @@ import { useGetNews } from "./hooks";
 import { NewProps, NormalizeNewProps } from "./interfaces/interfaces";
 
 function App() {
-  const [showNews, SetShowNews] = useState([]) as any;
+  const [showNews, SetShowNews] = useState() as any;
 
   const { news } = useGetNews();
 
@@ -24,9 +24,20 @@ function App() {
   return (
     <Layout>
       <SearchBar handleOnChange={onChange} />
-      {showNews.map((item: NormalizeNewProps, key: number) => (
-        <New item={item} key={key} />
-      ))}
+      {showNews ? (
+        showNews.map((item: NormalizeNewProps, key: number) => (
+          <New item={item} key={key} />
+        ))
+      ) : (
+        <div className="loader">
+          <div className="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }
